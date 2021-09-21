@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Fontawesome -->
+     <script defer src="js/lib/fontawesome.min.js"></script>
+
+      <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Jquery Interface</title>
+  </head>
+  <body>
+    <header class="bg-primary text-white"><div class="container">
+        <h4 class="py-2">Wisdom Pet Medicine</h4>
+    </div></header>
+      <main class="page bg-white" id="petratings">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+<!-- App Starts Here -->
+<div id="main-app">
+
+  <div class="add-appointment card textcenter mt-3">
+    <div class="apt-addheading card-header bg-primary text-white">
+      <i class="fas fa-plus"></i> Add Appointment
+    </div><!-- card-header git-->
+
+    <div class="card-body">
+
+      <form id="aptForm">
+      
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right" for="petName">Pet Name</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="petName" id="petName" placeholder="Pet's Name">
+          </div><!-- col-md-10 --> 
+        </div><!-- form-group --> 
+
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right"
+            for="ownerName">Pet Owner</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control"
+              id="ownerName" placeholder="Owner's Name">
+          </div><!-- col-md-10 -->
+        </div><!-- form-group --> 
+
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right" for="aptDate">Date</label>
+          <div class="col-md-4">
+            <input type="date" class="form-control" id="aptDate">
+          </div><!-- col-md-4 --> 
+          <label class="col-md-2 col-form-label text-md-right" for="aptTime">Time</label>
+          <div class="col-md-4">
+            <input type="time" class="form-control" name="aptTime" id="aptTime">
+          </div><!-- col-md-4 --> 
+        </div><!-- form-group -->
+
+        <div class="form-group form-row">
+          <label class="col-md-2 text-md-right" for="aptNotes">Apt. Notes</label>
+          <div class="col-md-10">
+            <textarea class="form-control" rows="4" cols="50" name="aptNotes" id="aptNotes" placeholder="Appointment Notes"></textarea>
+          </div><!-- col-md-10 --> 
+        </div><!-- form-group -->
+
+        <div class="form-group form-row mb-0">
+          <div class="offset-md-2 col-md-10">
+            <button type="submit" class="btn btn-primary d-block ml-auto">Add Appointment</button>
+          </div><!-- col-md-offset-2 --> 
+        </div><!-- form-group -->
+
+      </form>
+    </div><!-- card-body -->
+  </div><!-- card-primary -->
+
+  <div class="search-appointments row justify-content-center my-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input id="SearchApts" placeholder="Search" type="text" class="form-control" aria-label="Search Appointments">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-primary dropdown-toggle"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by: <span class="caret"></span>
+          </button>
+
+          <div class="sort-menu dropdown-menu dropdown-menu-right">
+            <a class="sort-by dropdown-item" href="#" id="sort-petName">Pet Name</a>
+            <a class="sort-by dropdown-item active" href="#" id="sort-aptDate">Date</a>
+            <a class="sort-by dropdown-item" href="#" id="sort-ownerName">Owner</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="sort-dir dropdown-item" href="#" id="sort-asc">Asc</a>
+            <a class="sort-dir dropdown-item active" href="#" id="sort-desc">Desc</a>
+          </div>
+        </div><!-- input-group-btn --> 
+      </div><!-- input-group --> 
+    </div><!-- col-md-offset-3 --> 
+  </div><!-- search-appointments -->
+
+  <div id="petList" class="appointment-list item-list mb-3" >
+  </div><!-- appointment-list -->
+
+    </div><!-- main-app -->
+    <!-- App Ends Here -->
+    
+                </div><!-- col-md-12 -->
+              </div><!-- row -->
+            </div><!-- container -->
+        </main><!-- main -->
+        <footer class="container d-flex text-white py-2">
+            <div class="center"><p>Israel Sepulveda</p></div>
+        </footer><!-- footer -->
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script src="js/lib/jquery.loadTemplate.min.js"></script>
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="js/script.js"></script>
+    
+      </body>
+ 
+</html>
